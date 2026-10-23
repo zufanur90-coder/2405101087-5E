@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic</title>
 
+    <style>
+        nav {
+            background: #C9BFBF;
+            grid-area: nav;
+        }
+
+        header {
+            background: #707070;
+            grid-area: header;
+            text-align: center;
+        }
+
+        main {
+            background: #ABABAB;
+            grid-area: section;
+        }
+
+        footer {
+            background: #707070;
+            grid-area: footer;
+            font-size: small;
+            text-align: center;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav section section"
+                "footer footer footer";
+            grid-template-rows: 80px 1fr 50px;
+            grid-template-columns: 20% 1fr 18%;
+            grid-gap: 5px;
+            height: 100vh;
+            margin: 10px;
+        }
+
+        header, nav, main, footer {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>HTML5 Semantic</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pengertian">Pengertian</a></li>
+            <li><a href="#kesimpulan">Kesimpulan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="pengertian">
+            <h2>Pengertian</h2>
+            <p>Konten</p>
+        </section>
+
+        <section id="kesimpulan">
+            <h2>Kesimpulan</h2>
+            <p>Konten</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright</p>
+    </footer>
+
+</body>
+</html>
