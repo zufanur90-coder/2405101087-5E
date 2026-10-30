@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Portofolio</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Calibri, Arial, sans-serif; background: #eee; }
+      h1.judul { text-align: center; margin: 15px 0 10px; font-size: 20px; letter-spacing: 2px; }
+
+      .container { width: 800px; margin: auto; background: white; }
+      .clear { clear: both; }
+
+      /* Header: banner + 3 menu */
+      .header {
+        height: 180px;
+        background: linear-gradient(135deg, #2c3e50, #4ca1af);
+        position: relative;
+      }
+      .menu { position: absolute; top: 10px; left: 10px; }
+      .menu a {
+        display: inline-block;
+        width: 110px;
+        padding: 10px 0;
+        margin-right: 6px;
+        text-align: center;
+        background: #222;
+        color: white;
+        text-decoration: none;
+        border: 2px solid #555;
+      }
+      .menu a:hover { background: #555; }
+
+      /* Sidebar kiri */
+      .sidebar {
+        float: left;
+        width: 250px;
+        min-height: 400px;
+        padding: 20px;
+        background: #3b3b4f;
+        color: white;
+        text-align: justify;
+      }
+      .sidebar h3 { margin-top: 0; }
+
+      /* Konten utama */
+      .main {
+        float: left;
+        width: 550px;
+        min-height: 400px;
+        padding: 20px;
+      }
+      .kotak {
+        float: left;
+        width: 100px;
+        height: 80px;
+        margin: 10px 14px 10px 0;
+        background: #777;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        line-height: 80px;
+        border: 4px solid #222;
+      }
+      .kisah { margin-top: 20px; text-align: justify; font-size: 14px; }
+
+      /* Footer */
+      .footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="judul">WEB PORTOFOLIO</h1>
+
+    <div class="container">
+      <div class="header">
+        <div class="menu">
+          <a href="#">Beranda</a>
+          <a href="#">Profil</a>
+          <a href="#">Kontak</a>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <h3>TENTANG AKU</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+      </div>
+
+      <div class="main">
+        <div class="kotak">SD</div>
+        <div class="kotak">SMP</div>
+        <div class="kotak">SMA</div>
+        <div class="kotak">S1</div>
+        <div class="clear"></div>
+        <p class="kisah">Kisah Sekolahku : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+      </div>
+
+      <div class="clear"></div>
+      <div class="footer">Copyright &copy; Nama Kamu - Web Portofolio</div>
+    </div>
+  </body>
+</html>
