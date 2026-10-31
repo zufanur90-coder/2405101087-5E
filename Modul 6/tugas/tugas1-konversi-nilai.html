@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Konversi Nilai Angka ke Huruf</title>
+  <style>
+    body { font-family: Calibri, Arial, sans-serif; max-width: 420px; margin: 40px auto; }
+    input, button { font-size: 16px; padding: 6px; }
+    #hasil { margin-top: 16px; font-size: 20px; font-weight: bold; }
+    table { border-collapse: collapse; margin-top: 20px; }
+    td, th { border: 1px solid #999; padding: 4px 12px; }
+  </style>
+  <script>
+    function konversi() {
+      var teks = document.getElementById("nilai").value;
+      var nilai = Number(teks);
+      var huruf;
+
+      if (teks === "" || isNaN(nilai) || nilai < 0 || nilai > 100) {
+        document.getElementById("hasil").innerHTML = "Masukkan angka 0 - 100";
+        return;
+      }
+
+      if (nilai <= 40)       huruf = "E";
+      else if (nilai <= 55)  huruf = "D";
+      else if (nilai <= 60)  huruf = "C";
+      else if (nilai <= 65)  huruf = "BC";
+      else if (nilai <= 70)  huruf = "B";
+      else if (nilai <= 80)  huruf = "AB";
+      else                   huruf = "A";
+
+      document.getElementById("hasil").innerHTML = "Nilai " + nilai + " = " + huruf;
+    }
+  </script>
+</head>
+<body>
+  <h2>Konversi Nilai</h2>
+  Nilai angka (0-100):
+  <input type="text" id="nilai" size="6">
+  <button onclick="konversi()">Konversi</button>
+  <div id="hasil"></div>
+
+  <table>
+    <tr><th>Rentang</th><th>Huruf</th></tr>
+    <tr><td>0-40</td><td>E</td></tr>
+    <tr><td>41-55</td><td>D</td></tr>
+    <tr><td>56-60</td><td>C</td></tr>
+    <tr><td>61-65</td><td>BC</td></tr>
+    <tr><td>66-70</td><td>B</td></tr>
+    <tr><td>71-80</td><td>AB</td></tr>
+    <tr><td>81-100</td><td>A</td></tr>
+  </table>
+</body>
+</html>
